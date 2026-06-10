@@ -267,7 +267,12 @@ const Index = () => {
 
       {/* Similar Images Retrieval Grid */}
       <AnimatePresence>
-        {result && <SimilarImagesGrid disease={result.disease} />}
+        {result && (
+          <SimilarImagesGrid
+            disease={result.disease}
+            queryImageFile={imageFile}
+          />
+        )}
       </AnimatePresence>
     </div>
   );
