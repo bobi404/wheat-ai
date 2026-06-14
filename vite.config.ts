@@ -28,6 +28,7 @@ export default defineConfig(({ mode }) => ({
       workbox: {
         maximumFileSizeToCacheInBytes: 50 * 1024 * 1024, // 50 MB
         globPatterns: ['**/*.{js,css,html,ico,png,svg,wasm}'],
+        globIgnores: ['**/model_final.onnx', '**/backbone_final.onnx'],
       },
       manifest: {
         name: 'WheatWise AI',
