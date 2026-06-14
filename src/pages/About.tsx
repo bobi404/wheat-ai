@@ -1,4 +1,3 @@
-import { Github, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const developers = [
@@ -65,15 +64,6 @@ const About = () => {
               className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/30"
             >
               <div className="flex items-start gap-4">
-                {/* <div
-                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary text-sm font-bold text-secondary-foreground"
-                  style={{ fontFamily: 'var(--font-display)' }}
-                >
-                  {dev.name
-                    .split(' ')
-                    .map((n) => n[0])
-                    .join('')}
-                </div> */}
                 <div className="space-y-1">
                   <h3
                     className="font-semibold"
@@ -85,26 +75,29 @@ const About = () => {
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {dev.desc}
                   </p>
-                  {/* <div className="flex gap-2 pt-2">
-                    <a
-                      href="#"
-                      className="text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      <Github className="h-4 w-4" />
-                    </a>
-                    <a
-                      href="#"
-                      className="text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      <Linkedin className="h-4 w-4" />
-                    </a>
-                  </div> */}
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
+
+      {/* Institution */}
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        className="flex flex-col items-center gap-4 pt-4 border-t border-border"
+      >
+        <p className="text-sm text-muted-foreground">Supported by</p>
+        <div className="rounded-2xl border border-border bg-white px-8 py-4">
+          <img
+            src="/Logo_Binus_University.png"
+            alt="Binus University"
+            className="h-16 object-contain"
+          />
+        </div>
+      </motion.div>
     </div>
   );
 };
