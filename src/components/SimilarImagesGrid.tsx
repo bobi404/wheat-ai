@@ -21,7 +21,7 @@ const CLASSES = [
 const DISEASE_IMAGES: Record<string, string[]> = Object.fromEntries(
   CLASSES.map((cls) => [
     cls,
-    Array.from({ length: 5 }, (_, i) => `/images/${cls}/${i + 1}.jpg`),
+    Array.from({ length: 10 }, (_, i) => `/images/${cls}/${i + 1}.jpg`),
   ]),
 );
 
@@ -362,7 +362,7 @@ const SimilarImagesGrid = ({
               </span>
             </p>
           )}
-          <div className="grid grid-cols-5 gap-2">
+          <div className="grid grid-cols-5 gap-2 sm:grid-cols-5 md:grid-cols-10">
             {ranked.map(({ src, distance }, i) => (
               <motion.div
                 key={src}
